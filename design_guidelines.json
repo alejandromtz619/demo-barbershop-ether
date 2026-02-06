@@ -1,0 +1,132 @@
+{
+  "project_identity": {
+    "name": "BarberShop Demo",
+    "tagline": "The Gentleman's Ritual",
+    "tone": "Luxury, Exclusive, Timeless, Masculine",
+    "archetype": "The Sovereign (Control, Leadership, Excellence)"
+  },
+  "typography": {
+    "headings": {
+      "family": "Playfair Display, serif",
+      "weights": ["400", "700"],
+      "usage": "All section titles, hero text, and modal headers. Use 'italic' for accent words."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["300", "400", "600"],
+      "usage": "UI elements, buttons, paragraphs, data tables."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Time slots, price tags, technical details."
+    }
+  },
+  "colors": {
+    "palette": {
+      "obsidian": "#0A0A0A",
+      "charcoal": "#121212",
+      "gold_foil": "#D4AF37",
+      "antique_brass": "#C5A059",
+      "marble_white": "#F0F0F0",
+      "slate_grey": "#2A2A2A"
+    },
+    "functional": {
+      "background": "#0A0A0A",
+      "surface": "#121212",
+      "border": "rgba(212, 175, 55, 0.2)",
+      "primary": "#D4AF37",
+      "primary_foreground": "#000000",
+      "secondary": "#2A2A2A",
+      "muted": "rgba(255,255,255,0.4)"
+    },
+    "gradients": {
+      "gold_shimmer": "linear-gradient(135deg, #D4AF37 0%, #C5A059 100%)",
+      "dark_veil": "linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,1) 100%)"
+    }
+  },
+  "visual_enhancers": {
+    "texture": "url('https://grainy-gradients.vercel.app/noise.svg')",
+    "glassmorphism": "backdrop-filter: blur(12px) saturate(180%); bg-black/40; border: 1px solid rgba(255,255,255,0.08)",
+    "shadows": {
+      "glow": "0 0 20px rgba(212, 175, 55, 0.15)",
+      "deep": "0 20px 40px rgba(0,0,0,0.8)"
+    }
+  },
+  "image_urls": {
+    "hero": "https://images.unsplash.com/photo-1590360316066-357b23e0dd15?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "login_bg": "https://images.unsplash.com/photo-1588349297539-6915a426001e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "barbers": [
+      {
+        "name": "Enzo 'The Blade'",
+        "role": "Master Barber",
+        "url": "https://images.unsplash.com/photo-1703792684940-a05aa0f1188f?crop=entropy&cs=srgb&fm=jpg&q=85"
+      },
+      {
+        "name": "Marco V.",
+        "role": "Senior Stylist",
+        "url": "https://images.unsplash.com/photo-1741345980697-f3c43eba44a0?crop=entropy&cs=srgb&fm=jpg&q=85"
+      },
+      {
+        "name": "James K.",
+        "role": "Beard Specialist",
+        "url": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?crop=entropy&cs=srgb&fm=jpg&q=85"
+      },
+      {
+        "name": "Dante",
+        "role": "Colorist",
+        "url": "https://images.unsplash.com/photo-1659355751282-5ca7807af9e9?crop=entropy&cs=srgb&fm=jpg&q=85"
+      },
+      {
+        "name": "Silas",
+        "role": "Junior Barber",
+        "url": "https://images.unsplash.com/photo-1544215897-e4a5eeae9cc1?crop=entropy&cs=srgb&fm=jpg&q=85"
+      }
+    ],
+    "services": {
+      "haircut": "https://images.unsplash.com/photo-1659355751282-5ca7807af9e9?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "wash": "https://images.unsplash.com/photo-1593702233354-259d1f794ed1?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "beard": "https://images.unsplash.com/photo-1659355751282-5ca7807af9e9?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "eyebrows": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?crop=entropy&cs=srgb&fm=jpg&q=85"
+    }
+  },
+  "layout_strategies": {
+    "login_page": {
+      "structure": "Split screen. 60% Image (Left) / 40% Form (Right).",
+      "style": "The image side must have a gold tint overlay. The form side must be Deep Obsidian with Gold borders.",
+      "credentials_display": "Use a 'glass' card floating on the bottom left of the image section."
+    },
+    "dashboard_manager": {
+      "grid": "Grid Mode B (High Density).",
+      "sidebar": "Collapsed by default on mobile, fixed width (80px) on desktop to maximize calendar space.",
+      "calendar_style": "Custom styling. Current day = Gold Border. Booked slots = Charcoal bg with Gold text.",
+      "widgets": "Use 'Cardless' style with sharp borders for appointment lists."
+    },
+    "client_booking": {
+      "grid": "Grid Mode A (Tetris) for Service Selection.",
+      "steps": "Wizard format: Services -> Barber -> Time -> Confirm.",
+      "cards": "Service cards should be tall with image top, text bottom. Hover = Image zooms slightly, border glows gold."
+    }
+  },
+  "component_instructions": {
+    "buttons": "Sharp edges (rounded-none). Primary: Gold bg, Black text, uppercase, tracking-widest. Secondary: Transparent bg, Gold border, Gold text.",
+    "inputs": "bg-transparent border-b border-white/20 focus:border-gold_foil. No outlines. Ghost text.",
+    "cards": "bg-[#121212] border border-white/5 hover:border-gold_foil/50 transition-colors duration-300.",
+    "modals": "Backdrop blur-xl. Modal content: Obsidian bg with thin gold border.",
+    "calendar": "Override Shadcn calendar. Days must be square. Selected day = Gold circle."
+  },
+  "universal_guidelines": [
+    "Dark Mode ONLY. No light mode toggle.",
+    "Use 'Playfair Display' for all Headings (H1-H4).",
+    "Use 'Manrope' for all body text.",
+    "Always apply a subtle noise texture to the background using specific CSS.",
+    "Animations: Use framer-motion for smooth page transitions (fade-in + slide-up).",
+    "Data-Test-ID: All interactive elements must have data-testid attributes."
+  ],
+  "required_packages": [
+    "framer-motion",
+    "lucide-react",
+    "date-fns",
+    "clsx",
+    "tailwind-merge"
+  ]
+}
