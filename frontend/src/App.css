@@ -1,34 +1,173 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* App Styles - BarberShop Demo */
+
+/* Ensure proper app container */
+.App {
+  min-height: 100vh;
+  background-color: #0A0A0A;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Calendar Customization */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #D4AF37;
+  --rdp-background-color: rgba(212, 175, 55, 0.1);
+  margin: 0;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.rdp-months {
+  justify-content: center;
 }
 
-.App-link {
-    color: #61dafb;
+.rdp-month {
+  background: transparent;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rdp-caption_label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #F0F0F0;
+  text-transform: capitalize;
+}
+
+.rdp-nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rdp-nav_button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #D4AF37;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rdp-nav_button:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #D4AF37;
+}
+
+.rdp-head_cell {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rdp-cell {
+  padding: 2px;
+}
+
+.rdp-day {
+  width: 40px;
+  height: 40px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rdp-day:hover:not(.rdp-day_disabled):not(.rdp-day_selected) {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.rdp-day_selected {
+  background: #D4AF37 !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.rdp-day_today {
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.rdp-day_disabled {
+  color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+.rdp-day_outside {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(212, 175, 55, 0.3) 50%,
+    rgba(212, 175, 55, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #1A1A1A;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #F0F0F0;
 }
