@@ -1,0 +1,9 @@
+backend
+memory
+tests
+test_reports
+*.md
+*.json
+!vercel.json
+!frontend/package.json
+!frontend/components.json
