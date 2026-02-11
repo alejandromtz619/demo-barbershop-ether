@@ -218,7 +218,7 @@ const ClientBooking = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-white/50">Total:</span>
-                    <span className="text-[#D4AF37] font-mono text-lg">${totals.price}</span>
+                    <span className="text-[#D4AF37] font-mono text-lg">₲{totals.price.toLocaleString('es-PY')}</span>
                   </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@ const ClientBooking = () => {
                         <h3 className="font-heading text-lg text-white">{service.name}</h3>
                         <p className="text-sm text-white/50 mb-3">{service.description}</p>
                         <div className="flex items-center justify-between">
-                          <span className="font-mono text-[#D4AF37]">${service.price}</span>
+                          <span className="font-mono text-[#D4AF37]">₲{service.price.toLocaleString('es-PY')}</span>
                           <span className="text-xs text-white/40 flex items-center gap-1">
                             <Clock className="w-3 h-3" /> {service.duration} min
                           </span>
@@ -466,7 +466,7 @@ const ClientBooking = () => {
                         <DollarSign className="w-5 h-5 text-[#D4AF37] mt-0.5" />
                         <div>
                           <p className="text-white/50 text-sm">Total ({totals.duration} min)</p>
-                          <p className="text-[#D4AF37] font-mono text-2xl">${totals.price}</p>
+                          <p className="text-[#D4AF37] font-mono text-2xl">₲{totals.price.toLocaleString('es-PY')}</p>
                         </div>
                       </div>
                     </div>
@@ -516,7 +516,7 @@ const ClientBooking = () => {
               {selectedServices.length > 0 && (
                 <div className="text-sm">
                   <span className="text-white/50">Total: </span>
-                  <span className="text-[#D4AF37] font-mono text-lg">${totals.price}</span>
+                  <span className="text-[#D4AF37] font-mono text-lg">₲{totals.price.toLocaleString('es-PY')}</span>
                   <span className="text-white/30 ml-2">({totals.duration} min)</span>
                 </div>
               )}

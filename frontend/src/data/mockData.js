@@ -3,8 +3,8 @@
 export const BARBERS = [
   {
     id: 'barber-1',
-    name: "Enzo 'The Blade'",
-    role: 'Master Barber',
+    name: 'Enzo Rodríguez',
+    role: 'Barbero Master',
     image: 'https://images.unsplash.com/photo-1703792684940-a05aa0f1188f?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     specialties: ['Corte', 'Barba'],
     rating: 4.9,
@@ -12,8 +12,8 @@ export const BARBERS = [
   },
   {
     id: 'barber-2',
-    name: 'Marco V.',
-    role: 'Senior Stylist',
+    name: 'Marco Velázquez',
+    role: 'Estilista Senior',
     image: 'https://images.unsplash.com/photo-1741345980697-f3c43eba44a0?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     specialties: ['Corte', 'Lavado'],
     rating: 4.8,
@@ -21,8 +21,8 @@ export const BARBERS = [
   },
   {
     id: 'barber-3',
-    name: 'James K.',
-    role: 'Beard Specialist',
+    name: 'Javier Ortiz',
+    role: 'Especialista en Barba',
     image: 'https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     specialties: ['Barba', 'Cejas'],
     rating: 4.9,
@@ -30,8 +30,8 @@ export const BARBERS = [
   },
   {
     id: 'barber-4',
-    name: 'Dante',
-    role: 'Colorist',
+    name: 'Dante Paredes',
+    role: 'Colorista',
     image: 'https://images.unsplash.com/photo-1659355751282-5ca7807af9e9?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     specialties: ['Corte', 'Lavado', 'Cejas'],
     rating: 4.7,
@@ -39,8 +39,8 @@ export const BARBERS = [
   },
   {
     id: 'barber-5',
-    name: 'Silas',
-    role: 'Junior Barber',
+    name: 'Silas Benítez',
+    role: 'Barbero Junior',
     image: 'https://images.unsplash.com/photo-1544215897-e4a5eeae9cc1?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     specialties: ['Corte', 'Nariz'],
     rating: 4.6,
@@ -53,7 +53,7 @@ export const SERVICES = [
     id: 'service-haircut',
     name: 'Corte',
     description: 'Corte clásico o moderno a tu medida',
-    price: 25,
+    price: 40000,
     duration: 30,
     image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     icon: 'Scissors'
@@ -62,7 +62,7 @@ export const SERVICES = [
     id: 'service-wash',
     name: 'Lavado',
     description: 'Lavado premium con masaje capilar',
-    price: 15,
+    price: 25000,
     duration: 20,
     image: 'https://images.unsplash.com/photo-1593702233354-259d1f794ed1?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     icon: 'Droplets'
@@ -71,7 +71,7 @@ export const SERVICES = [
     id: 'service-beard',
     name: 'Barba',
     description: 'Perfilado y arreglo de barba profesional',
-    price: 20,
+    price: 35000,
     duration: 25,
     image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     icon: 'Sparkles'
@@ -80,7 +80,7 @@ export const SERVICES = [
     id: 'service-eyebrows',
     name: 'Cejas',
     description: 'Diseño y depilación de cejas',
-    price: 10,
+    price: 18000,
     duration: 15,
     image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     icon: 'Eye'
@@ -89,7 +89,7 @@ export const SERVICES = [
     id: 'service-nose',
     name: 'Nariz',
     description: 'Depilación de vello nasal con cera',
-    price: 8,
+    price: 15000,
     duration: 10,
     image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?crop=entropy&cs=srgb&fm=jpg&q=85&w=400',
     icon: 'Wind'
@@ -129,7 +129,7 @@ export const INITIAL_APPOINTMENTS = [
     date: new Date().toISOString().split('T')[0],
     time: '10:00',
     status: 'confirmed',
-    totalPrice: 45,
+    totalPrice: 75000,
     totalDuration: 55,
     createdAt: new Date().toISOString()
   },
@@ -142,7 +142,7 @@ export const INITIAL_APPOINTMENTS = [
     date: new Date().toISOString().split('T')[0],
     time: '11:30',
     status: 'pending',
-    totalPrice: 25,
+    totalPrice: 40000,
     totalDuration: 30,
     createdAt: new Date().toISOString()
   },
@@ -155,7 +155,7 @@ export const INITIAL_APPOINTMENTS = [
     date: new Date().toISOString().split('T')[0],
     time: '14:00',
     status: 'completed',
-    totalPrice: 30,
+    totalPrice: 53000,
     totalDuration: 40,
     createdAt: new Date().toISOString()
   },
@@ -168,7 +168,7 @@ export const INITIAL_APPOINTMENTS = [
     date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
     time: '09:30',
     status: 'pending',
-    totalPrice: 40,
+    totalPrice: 65000,
     totalDuration: 50,
     createdAt: new Date().toISOString()
   },
@@ -181,7 +181,7 @@ export const INITIAL_APPOINTMENTS = [
     date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
     time: '16:00',
     status: 'confirmed',
-    totalPrice: 33,
+    totalPrice: 55000,
     totalDuration: 40,
     createdAt: new Date().toISOString()
   }

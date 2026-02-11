@@ -128,7 +128,7 @@ const ManagerDashboard = () => {
               </div>
               <div>
                 <p className="text-white/50 text-xs">Ingresos Hoy</p>
-                <p className="text-2xl font-heading text-white" data-testid="stats-revenue">${stats.todayRevenue}</p>
+                <p className="text-2xl font-heading text-white" data-testid="stats-revenue">₲{stats.todayRevenue.toLocaleString('es-PY')}</p>
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ const ManagerDashboard = () => {
                                 />
                               )}
                               <div className="text-right">
-                                <p className="font-mono text-[#D4AF37]">${apt.totalPrice}</p>
+                                <p className="font-mono text-[#D4AF37]">₲{apt.totalPrice.toLocaleString('es-PY')}</p>
                                 <p className="text-xs text-white/40 hidden sm:block">{barber?.name}</p>
                               </div>
                               <ChevronRight className="w-4 h-4 text-white/30" />
@@ -331,7 +331,7 @@ const ManagerDashboard = () => {
                 
                 <div className="flex items-center gap-3">
                   <DollarSign className="w-5 h-5 text-[#D4AF37]" />
-                  <p className="text-white font-mono text-xl">${selectedAppointment.totalPrice}</p>
+                  <p className="text-white font-mono text-xl">₲{selectedAppointment.totalPrice.toLocaleString('es-PY')}</p>
                 </div>
               </div>
               
