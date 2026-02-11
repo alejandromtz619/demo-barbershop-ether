@@ -1,7 +1,5 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd frontend && yarn install && yarn build",
-  "devCommand": "cd frontend && yarn start",
-  "installCommand": "cd frontend && yarn install",
-  "outputDirectory": "frontend/build"
+  "buildCommand": "yarn build",
+  "outputDirectory": "build",
+  "installCommand": "yarn install"
 }

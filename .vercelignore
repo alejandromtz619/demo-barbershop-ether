@@ -1,9 +1,7 @@
-backend
-memory
-tests
-test_reports
-*.md
-*.json
-!vercel.json
-!frontend/package.json
-!frontend/components.json
+/backend
+/memory
+/tests
+/test_reports
+/README.md
+/test_result.md
+/design_guidelines.json
